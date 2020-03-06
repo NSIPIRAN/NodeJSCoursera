@@ -19,6 +19,12 @@ html
     
     // Custom styles for this template
     link(href='/stylesheets/grayscale.min.css' rel='stylesheet')
+
+    //Custom leaflet
+    link(rel='stylesheet' href='https://unpkg.com/leaflet@1.6.0/dist/leaflet.css' integrity='sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==' crossorigin='')
+    script(src='https://unpkg.com/leaflet@1.6.0/dist/leaflet.js' integrity='sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==' crossorigin='')
+
+
   body
     block content
     // Navigation
@@ -54,42 +60,9 @@ html
               a(href='http://startbootstrap.com/template-overviews/grayscale/') the preview page
               | . The theme is open source, and you can use it for any purpose, personal or commercial.
         img.img-fluid(src='img/ipad.png' alt='')
-    // Projects Section
-    section#projects.projects-section.bg-light
-      .container
-        // Featured Project Row
-        .row.align-items-center.no-gutters.mb-4.mb-lg-5
-          .col-xl-8.col-lg-7
-            img.img-fluid.mb-3.mb-lg-0(src='img/bg-masthead.jpg' alt='')
-          .col-xl-4.col-lg-5
-            .featured-text.text-center.text-lg-left
-              h4 Shoreline
-              p.text-black-50.mb-0
-                | Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
-        // Project One Row
-        .row.justify-content-center.no-gutters.mb-5.mb-lg-0
-          .col-lg-6
-            img.img-fluid(src='img/demo-image-01.jpg' alt='')
-          .col-lg-6
-            .bg-black.text-center.h-100.project
-              .d-flex.h-100
-                .project-text.w-100.my-auto.text-center.text-lg-left
-                  h4.text-white Misty
-                  p.mb-0.text-white-50
-                    | An example of where you can put an image of a project, or anything else, along with a description.
-                  hr.d-none.d-lg-block.mb-0.ml-0
-        // Project Two Row
-        .row.justify-content-center.no-gutters
-          .col-lg-6
-            img.img-fluid(src='img/demo-image-02.jpg' alt='')
-          .col-lg-6.order-lg-first
-            .bg-black.text-center.h-100.project
-              .d-flex.h-100
-                .project-text.w-100.my-auto.text-center.text-lg-right
-                  h4.text-white Mountains
-                  p.mb-0.text-white-50
-                    | Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!
-                  hr.d-none.d-lg-block.mb-0.mr-0
+    //map
+    #mapid
+
     // Signup Section
     section#signup.signup-section
       .container
@@ -144,3 +117,5 @@ html
     script(src='/vendor/jquery-easing/jquery.easing.min.js')
     // Custom scripts for this template
     script(src='/javascripts/grayscale.min.js')
+    //leaflet
+    script(src='/javascripts/map.js')

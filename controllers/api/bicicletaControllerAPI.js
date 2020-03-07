@@ -1,4 +1,3 @@
-
 var Bicicleta =require('../../models/biclicleta');
 
 exports.bicicleta_list=function(req,res){
@@ -22,5 +21,14 @@ exports.bicicleta_delete=function(req,res){
     res.status(204).send();
 }
 
-
-
+exports.bicicleta_update=function(req,res){
+    var bici=Bicicleta.findById(req.body.id);
+    bici.id=req.body.nid;
+    bici.color=req.body.color;
+    bici.modelo=req.body.modelo;
+    bici.ubicacion=[req.body.lat, req.body.lng];
+    
+    
+    res.status(200).send();
+    
+}

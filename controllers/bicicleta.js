@@ -30,7 +30,7 @@ exports.bicicleta_update_get=function(req,res){
 }
 exports.bicicleta_update_post=function(req,res){
     var bici=bicicleta.findById(req.params.id);
-    bici.id=req.body.id;
+    bici.id=req.body.nid;
     bici.color=req.body.color;
     bici.modelo=req.body.modelo;
     bici.ubicacion=[req.body.lat, req.body.lng];
